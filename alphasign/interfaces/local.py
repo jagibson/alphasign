@@ -25,10 +25,10 @@ class Serial(base.BaseInterface):
     # TODO(ms): these settings can probably be tweaked and still support most of
     # the devices.
     self._conn = serial.Serial(port=self.device,
-                               baudrate=4800,
+                               baudrate=9600,
+                               bytesize=7,
                                parity=serial.PARITY_EVEN,
-                               stopbits=serial.STOPBITS_TWO,
-                               bytesize=serial.SEVENBITS,
+                               stopbits=serial.STOPBITS_ONE,
                                timeout=1,
                                xonxoff=0,
                                rtscts=0)
